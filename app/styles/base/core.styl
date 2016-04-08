@@ -1,0 +1,49 @@
+html, body
+	box-sizing border-box
+	height 100%
+
+
+body
+	font-size $fontSize
+	line-height $lineHeight
+	font-family $fontFamily
+	background $bodyBackground
+
+
+*,
+*:before,
+*:after
+	box-sizing inherit
+
+
+a
+	color $linksColor
+	text-decoration none
+	transition all .2s ease
+	
+	&:hover
+		color $accentColor
+		transition none
+
+
+.wrapper
+	max-width $desktop
+	min-height 100%
+	margin auto
+	background #fff
+
+
+.container
+	padding $module $module*2
+	
+	+below($desktop)
+		padding $module
+	
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	font-family $headingsFontFamily 
+	line-height 1.1
