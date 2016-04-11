@@ -1,7 +1,11 @@
 extends ../layouts/main
 
+include ../blocks/channel-timetable/channel-timetable
+
+
 block head
 	- var pageTitle = 'Телепрограмма на неделю';
 
 block content
-	
+	each channel in data.channels
+		+channel-timetable(channel)

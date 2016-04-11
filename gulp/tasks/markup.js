@@ -9,10 +9,12 @@ import prettify     from 'gulp-html-prettify';
 import through      from 'through2';
 import errorHandler from '../utils/errorHandler';
 import paths        from '../paths';
+import fakeData     from '../../app/data/main'
 
 let data = {
+	data: fakeData,
 	jv0: 'javascript:void(0);',
-	timestamp: +new Date()
+	timestamp: +new Date(),
 };
 
 gulp.task('markup', () => {
@@ -22,7 +24,7 @@ gulp.task('markup', () => {
 		.pipe(cached('jade'))
 		.pipe(gulpif(global.watch, inheritance({basedir: paths.baseSrc})))
 		.pipe(filter((file) => /app[\\\/]pages/.test(file.path)))
-		.pipe(jade({data: data}))
+		.pipe(jade({data}))
 		.pipe(prettify({
 			brace_style: 'expand',
 			indent_size: 1,

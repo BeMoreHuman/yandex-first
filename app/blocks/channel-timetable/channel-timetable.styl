@@ -1,0 +1,40 @@
+.channel-timetable
+	max-width 400px
+	padding $module*2
+	
+	&__header
+		display flex
+		align-items center
+	
+	&__logo
+		size($module*2.5)
+	
+	&__channel-name
+		padding-left $module
+		padding-right $module*0.5
+		font-size $fontSize*1.5
+		font-weight bold
+		cursor default
+
+	&__fav-button
+		clear-button()
+		size($module*1.2)
+		icon()
+		background-image svg('star.svg')
+		transform translateY(-20%)
+		opacity 0
+		transition transform $animationSpeed, opacity $animationSpeed
+		
+		.channel-timetable:hover &
+			opacity 1
+			transform none
+		
+		&:hover
+			background-image svg('star.svg', '[stroke]: ' + $accentColor)
+		
+		&--active,
+		&--active:hover
+			background-image svg('star.svg', '[fill]: ' + $accentColor + '; [stroke]: ' + $accentColor)
+	
+	&__list
+		padding-top $module
