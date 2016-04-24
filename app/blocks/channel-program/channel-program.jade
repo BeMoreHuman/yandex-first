@@ -1,4 +1,9 @@
+include ../program-popup/program-popup
+
 mixin channel-program(options)
 	+b.channel-program&attributes(attributes)
 		+e.time!= options.time
 		+e.name!= options.name
+
+		+e.popup
+			+program-popup(options.name)

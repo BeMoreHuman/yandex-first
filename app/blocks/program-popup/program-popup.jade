@@ -1,0 +1,10 @@
+mixin program-popup(name)
+	+b.program-popup&attributes(attributes)
+		+e.header(style="background-image: url('assets/images/thumbnail.jpg')")
+			//- +e.IMG.thumbnail(src='assets/images/thumbnail.jpg')
+			+e.name!= name
+		+e.body
+			+e.meta
+				+e.type сериалы
+				+e.min-age 12+
+			+e.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsam explicabo corporis, qui praesentium distinctio excepturi, quas ut nesciunt, rem iusto nihil maiores et minima, nam quia sed repellendus ipsum?

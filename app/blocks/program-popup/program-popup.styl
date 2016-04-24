@@ -1,0 +1,53 @@
+.program-popup
+	padding $module
+	border 1px solid $borderColor
+	background #fff
+	box-shadow 0 4px 16px rgba(0, 0, 0, .2)
+		
+	&__header
+		position relative
+		display flex
+		flex-direction column
+		justify-content flex-end
+		min-height 150px
+		padding $module*4 $module*0.5 $module*0.5
+		background-size cover
+		
+		&:before
+			content ''
+			position absolute
+			z-index 1
+			top 0
+			left 0
+			right 0
+			bottom 0
+			background-image linear-gradient(to top, rgba(0, 0, 0, .9) 0%, rgba(0, 0, 0, .6) 40%, rgba(0, 0, 0, .2) 70%, rgba(0, 0, 0, 0) 100%)
+	
+	&__name
+		position relative
+		z-index 2
+		font-family $headingsFontFamily
+		font-size 1.2rem
+		font-weight bold
+		color #fff
+	
+	&__meta
+		padding $module*0.75 0
+		font-size 0
+	
+	&__type,
+	&__min-age
+		display inline-block
+		color $mutedColor
+		
+	
+	&__type
+		padding-right $module*0.5
+		font-size 1rem
+	
+	&__min-age
+		padding 0 $module*0.3
+		font-size 0.8rem
+		line-height 1.4
+		background $borderColor
+		border-radius 3px

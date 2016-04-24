@@ -3,10 +3,10 @@ include ../channel-program/channel-program
 mixin channel-timetable(channel)
 	+b.channel-timetable&attributes(attributes)
 		+e.HEADER.header
-			+e.IMG.logo(src=channel.logo)
+			+e.logo
+				img(src=channel.logo)
 			+e.channel-name= channel.name
 			+e.BUTTON.fav-button
 		+e.list
 			each program in channel.programs
 				+channel-program(program)
-			

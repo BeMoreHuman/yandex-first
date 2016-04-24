@@ -59,6 +59,7 @@
     "safari": 7
   },
   "dependencies": {
-    "bemto.jade": "^1.0.2"
+    "bemto.jade": "^1.0.2",
+    "popper.js": "^0.3.6"
   }
 }

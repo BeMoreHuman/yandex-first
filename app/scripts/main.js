@@ -1,1 +1,5 @@
-console.log('hello world!');
+import initPopups from './modules/popups';
+
+document.addEventListener('DOMContentLoaded', () => {
+	initPopups();
+});
