@@ -1,7 +1,0 @@
-include ../channel-timetable/channel-timetable
-
-mixin channels-list()
-	+b.channels-list&attributes(attributes)
-		each channel in data.channels
-			+e.item
-				+channel-timetable(channel)
